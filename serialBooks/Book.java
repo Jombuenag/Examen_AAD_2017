@@ -1,57 +1,35 @@
 package serialBooks;
 import java.io.Serializable;
 
+//Clase del objeto libro
 public class Book implements Serializable{
+    String titulo, autor, editor,anyo, numeroPaginas;
 
-    public int id = 0;
-    public String title = "";
-    public String author = "";
-    public int relaseData = 0;
-    public String editor = "";
-    public int numberOfPages = 0;
+    public Book(){
 
-    //CONSTRUCTOR
-    public Book(int i, String t, String a, int rd,String e,int nop){
-        id= i;
-        title = t;
-        author = a;
-        relaseData = rd;
-        editor = e;
-        numberOfPages = nop;
+    }
+    public Book(String titulo, String autor, String editor, String anyo, String numeroPaginas) {
+        this.titulo = titulo;
+        this.autor = autor;
+        this.editor = editor;
+        this.anyo = anyo;
+        this.numeroPaginas = numeroPaginas;
     }
 
-
-    //GETS AND SETS
-    public int getId() {
-        return id;
+    public String getTitulo() {
+        return titulo;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    public String getTitle() {
-        return title;
+    public String getAutor() {
+        return autor;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getAuthor() {
-        return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
-    }
-
-    public int getRelaseData() {
-        return relaseData;
-    }
-
-    public void setRelaseData(int relaseData) {
-        this.relaseData = relaseData;
+    public void setAutor(String autor) {
+        this.autor = autor;
     }
 
     public String getEditor() {
@@ -62,24 +40,21 @@ public class Book implements Serializable{
         this.editor = editor;
     }
 
-
-    public int getNumberOfPages() {
-        return numberOfPages;
+    public String getAnyo() {
+        return anyo;
     }
 
-
-    public void setNumberOfPages(int numberOfPages) {
-        this.numberOfPages = numberOfPages;
+    public void setAnyo(String anyo) {
+        this.anyo = anyo;
     }
 
-    //PRINT METHOD, THIS GIVE US A "TICKET"
-    public void print(){
-        System.out.println("Id of the book : " + id);
-        System.out.println("Title : " + title);
-        System.out.println("Author : " + author);
-        System.out.println("Relase data : " + relaseData);
-        System.out.println("Editor : " + editor);
-        System.out.println("Number of pages : " + numberOfPages);
+    public String getNumeroPaginas() {
+        return numeroPaginas;
     }
+
+    public void setNumeroPaginas(String numeroPaginas) {
+        this.numeroPaginas = numeroPaginas;
+    }
+
 
 }
